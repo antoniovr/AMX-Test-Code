@@ -136,8 +136,8 @@
 <UserName></UserName>
 <Password></Password>
 <Comments></Comments>
-<File CompileType="Netlinx" Type="MasterSrc"><Identifier>NewSource</Identifier>
-<FilePathName>NewSource.axs</FilePathName>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>test</Identifier>
+<FilePathName>test.axs</FilePathName>
 <Comments></Comments>
 </File>
 <File CompileType="Netlinx" Type="TP4"><Identifier>test</Identifier>
