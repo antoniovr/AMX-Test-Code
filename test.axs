@@ -1,6 +1,6 @@
 PROGRAM_NAME='test'
 (***********************************************************)
-(*  FILE_LAST_MODIFIED_ON: 09/11/2019  AT: 10:00:47        *)
+(*  FILE_LAST_MODIFIED_ON: 11/12/2019  AT: 15:16:26        *)
 (***********************************************************)
 
 DEFINE_DEVICE 
@@ -19,7 +19,7 @@ DEFINE_CONSTANT
 DEFINE_VARIABLE
 
     // Definimos los tiempos de los que está compuesto nuestro timeline
-    volatile long lTimes[] = {500} // Actualiza el feedback cada 1/2 segundo
+    volatile long lTimes[] = {30000} // Actualiza el feedback cada 30 segundos
 
     volatile integer anCanales[] = {1,2,3,4,5,6}
 
@@ -37,12 +37,15 @@ DEFINE_START
 	    * timeline_repeat: el timeline 
     */
     timeline_create(_TLID,lTimes,1,timeline_relative,timeline_repeat)
+    
+    set_log_level(3)
 
 DEFINE_EVENT
 
     timeline_event[_TLID]
     {
-	// Entrará aquí cada 1/2 segundo
+	// Entrará aquí cada 30 segundos
+	send_string 0,"'I´m alive'"
     }
 	
     channel_event[vdvSystem,anCanales]
@@ -55,11 +58,11 @@ DEFINE_EVENT
 	    {
 		case 1: 
 		{
-		    
+		    fnInfo("'hello there!'")
 		}
 		case 2:
 		{
-		
+		    send_string 0,'how is it going?'
 		}
 		case 3:
 		{
