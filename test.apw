@@ -140,12 +140,6 @@
 <FilePathName>test.axs</FilePathName>
 <Comments></Comments>
 </File>
-<File CompileType="Netlinx" Type="TP4"><Identifier>test</Identifier>
-<FilePathName>test.TP4</FilePathName>
-<Comments></Comments>
-<DeviceMap DevAddr="Custom [10001:1:0]"><DevName>Custom [10001:1:0]</DevName>
-</DeviceMap>
-</File>
 </System>
 </Project>
 </Workspace>
