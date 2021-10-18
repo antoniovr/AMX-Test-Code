@@ -136,6 +136,10 @@
 <UserName></UserName>
 <Password></Password>
 <Comments></Comments>
+<File CompileType="Netlinx" Type="Include"><Identifier>CUSTOMAPI</Identifier>
+<FilePathName>..\Includes\CUSTOMAPI.axi</FilePathName>
+<Comments></Comments>
+</File>
 <File CompileType="Netlinx" Type="MasterSrc"><Identifier>test</Identifier>
 <FilePathName>test.axs</FilePathName>
 <Comments></Comments>
